@@ -17,5 +17,5 @@ class StructureBridgeImpl(IStructureFactory):
 			print("Step {0} in {1} minutes.".format(plan, random.randint(1,101)))
 		print("-------------------------------------")
 
-	def stopBuilding(self, object):
-		print("")
+	def stopBuilding(self):
+		print("Init stopBuilding in StructureBridgeImpl")
