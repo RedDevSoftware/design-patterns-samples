@@ -1,17 +1,19 @@
 const factory = require ('./factory/factory');
 
-const handler = async ( event ) => {
+const handler = async ( event, callback ) => {
     console.log( 'Received event:', event );
-    return await factory.execute( event );
+    await factory.execute( event, callback );
 };
 
 
+
+// Test
 const event = {
     "platform": "House", // Build platform 
-    "action": "Init" // Values is Init || Stop
+    "action": "getMaterials" // Values is getMaterials, 
 };
 
-handler(event).then((data) => {
+handler(event, (data) => {
     console.log(data);
 }).catch((err) => {
     console.error(err);

@@ -1,6 +1,6 @@
 const constants = require ('../../constants');
 
-exports.getMaterials = async () => {
+exports.getMaterials = async ( callback ) => {
     let result = {
         platform: "House",
         materials: []
@@ -14,5 +14,5 @@ exports.getMaterials = async () => {
         });
     });
     
-    return result;
+    callback( result );
 };

@@ -7,9 +7,4 @@ function define ( name, value ) {
 
 
 define ( 'HOUSE_MATERIALS', ['Material AC','Material AB','Material AD'] )
-define ( 'PLATFORMS', {
-    "House": "structureHouseImpl"
-} );
-define ( 'ACTIONS', [{
-    "Init": ["getMaterials"]
-}] );
+define ( 'ACTIONS', ["getMaterials"] );
